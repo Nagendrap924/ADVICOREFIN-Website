@@ -797,6 +797,8 @@
     margin-bottom: 20px;
     max-width: 280px;
   }
+  
+
 
   .footer-col h4 {
     font-family: 'Sora', sans-serif;
@@ -907,6 +909,10 @@
     .whatsapp .label { display: none; }
     .whatsapp { padding: 14px 16px; border-radius: 50%; }
   }
+  
+  header img{
+height:60px;
+}
 </style>
 </head>
 
@@ -915,7 +921,9 @@
 <!-- HEADER -->
 <header id="header">
   <div class="logo-area">
-    <div class="logo-icon">AF</div>
+    <img src="logo.png">
+
+  <!--   <div class="logo-icon">AF</div> -->
     <div class="logo-text">
       Advicore
       <span>Fin Technologies</span>
@@ -1074,12 +1082,12 @@
       <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Our CBS is trusted by a wide range of financial institutions</p>
       <div class="module-tags">
         <span class="tag">Cooperative Banks</span>
-        <span class="tag">Urban Co-op Banks</span>
+      <!--  <span class="tag">Urban Co-op Banks</span> -->
         <span class="tag">Microfinance (MFI)</span>
         <span class="tag">SHG Groups</span>
         <span class="tag">JLG Groups</span>
         <span class="tag">Credit Societies</span>
-        <span class="tag">NBFC-MFI</span>
+      <!--  <span class="tag">NBFC-MFI</span> -->
         <span class="tag">Thrift Societies</span>
       </div>
     </div>
@@ -1172,8 +1180,8 @@
       <div class="testi-author">
         <div class="testi-avatar">RK</div>
         <div>
-          <div class="testi-name">Ramesh Kumar</div>
-          <div class="testi-role">CEO, Sri Laxmi Cooperative Bank</div>
+          <div class="testi-name">Jagan</div>
+          <div class="testi-role">CEO, Spoorthi Co-operative society</div>
         </div>
       </div>
     </div>
@@ -1184,8 +1192,8 @@
       <div class="testi-author">
         <div class="testi-avatar">PS</div>
         <div>
-          <div class="testi-name">Priya Sharma</div>
-          <div class="testi-role">Manager, Bharath Urban MFI</div>
+          <div class="testi-name">Heamanth</div>
+          <div class="testi-role">Manager, Shiv Jyothi MFI</div>
         </div>
       </div>
     </div>
@@ -1196,8 +1204,8 @@
       <div class="testi-author">
         <div class="testi-avatar">SN</div>
         <div>
-          <div class="testi-name">Suresh Naidu</div>
-          <div class="testi-role">Director, Nandini Thrift Society</div>
+          <div class="testi-name">Navodaya</div>
+          <div class="testi-role">Senior Branch Manager, Navodaya Thrift Society</div>
         </div>
       </div>
     </div>
@@ -1239,7 +1247,7 @@
 
     <div class="contact-form reveal">
       <h3>Send an Enquiry</h3>
-      <form action="https://formspree.io/f/yourformid" method="POST">
+      <form action="https://formspree.io/f/xwvrpray" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label>Your Name *</label>
@@ -1291,6 +1299,7 @@
       </div>
       <p>Next-generation Core Banking platform built for cooperative banks, microfinance institutions and financial organisations across India.</p>
     </div>
+
 
     <div class="footer-col">
       <h4>Product</h4>
