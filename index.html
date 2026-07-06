@@ -3,25 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AdvicoreFin Technologies - Next Generation Core Banking Platform for Cooperative Banks, MFIs and Financial Organizations">
+<meta name="description" content="AdviCoreFin Technologies - Next Generation Core Banking Platform for Cooperative Banks, MFIs and Financial Organizations">
 <meta name="keywords" content="Core Banking System, CBS, Microfinance, Cooperative Bank, MFI, Banking Software">
 <title>AdviCoreFin Technologies | Core Banking System</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e4a86'/%3E%3Cpath d='M32 12 54 24v4H10v-4z' fill='%23fff'/%3E%3Crect x='14' y='30' width='6' height='20' fill='%23fff'/%3E%3Crect x='26' y='30' width='6' height='20' fill='%23fff'/%3E%3Crect x='38' y='30' width='6' height='20' fill='%23fff'/%3E%3Crect x='10' y='52' width='44' height='5' fill='%23fff'/%3E%3C/svg%3E">
 
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
 
 <style>
   :root {
-    --navy: #0a1628;
-    --navy-mid: #112240;
-    --navy-light: #1e3a5f;
-    --gold: #d4a843;
-    --gold-light: #f0c96b;
-    --teal: #00b8a9;
-    --white: #f8fafc;
-    --text-muted: #94a3b8;
-    --card-bg: #142038;
-    --border: rgba(212,168,67,0.15);
+    --blue-deep: #0a2f5c;
+    --blue-dark: #0e3f78;
+    --blue-mid: #1462b0;
+    --blue-bright: #2e86de;
+    --blue-pale: #eaf3fc;
+    --blue-pale-2: #f4f8fd;
+    --white: #ffffff;
+    --ink: #0f2842;
+    --text-muted: #5b7186;
+    --card-bg: #ffffff;
+    --border: rgba(14,63,120,0.10);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,21 +30,10 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--navy);
-    color: var(--white);
+    background: var(--white);
+    color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
-  }
-
-  /* ── NOISE TEXTURE OVERLAY ── */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.4;
   }
 
   /* ── HEADER ── */
@@ -51,26 +41,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 80px;
-    background: rgba(10, 22, 40, 0.95);
+    padding: 16px 80px;
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: padding 0.3s;
   }
 
-  .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
 
   .logo-icon {
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, var(--gold), var(--teal));
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue-bright));
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -78,14 +63,15 @@
     font-family: 'Sora', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    color: var(--navy);
+    color: var(--white);
+    flex-shrink: 0;
   }
 
   .logo-text {
     font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-size: 18px;
-    color: var(--white);
+    color: var(--blue-deep);
     line-height: 1.2;
   }
 
@@ -93,7 +79,7 @@
     display: block;
     font-size: 11px;
     font-weight: 400;
-    color: var(--gold);
+    color: var(--blue-mid);
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
@@ -117,16 +103,17 @@
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--gold);
+    background: var(--blue-bright);
     transition: width 0.3s;
   }
 
-  nav a:hover { color: var(--white); }
+  nav a:hover { color: var(--blue-deep); }
   nav a:hover::after { width: 100%; }
+  nav a.active { color: var(--blue-deep); }
 
   .nav-cta {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--navy) !important;
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright));
+    color: var(--white) !important;
     padding: 10px 22px;
     border-radius: 6px;
     font-weight: 600 !important;
@@ -136,18 +123,17 @@
   .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
   .nav-cta::after { display: none; }
 
-  /* hamburger */
   .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-  .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+  .hamburger span { width: 24px; height: 2px; background: var(--blue-deep); border-radius: 2px; transition: 0.3s; }
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 120px 40px 80px;
+    padding: 100px 40px 70px;
     position: relative;
     overflow: hidden;
   }
@@ -155,18 +141,17 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,184,169,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(212,168,67,0.08) 0%, transparent 50%),
-                var(--navy);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(46,134,222,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 85% 85%, rgba(20,98,176,0.08) 0%, transparent 55%),
+                var(--white);
   }
 
-  /* animated grid lines */
   .hero-grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(212,168,67,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(212,168,67,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(14,63,120,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,63,120,0.05) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
   }
@@ -177,9 +162,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(212,168,67,0.1);
-    border: 1px solid rgba(212,168,67,0.3);
-    color: var(--gold);
+    background: var(--blue-pale);
+    border: 1px solid rgba(20,98,176,0.25);
+    color: var(--blue-mid);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -193,7 +178,7 @@
   .hero-badge::before {
     content: '';
     width: 6px; height: 6px;
-    background: var(--gold);
+    background: var(--blue-bright);
     border-radius: 50%;
     animation: pulse 1.5s infinite;
   }
@@ -202,16 +187,17 @@
 
   .hero h1 {
     font-family: 'Sora', sans-serif;
-    font-size: clamp(38px, 6vw, 72px);
+    font-size: clamp(38px, 6vw, 70px);
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -0.02em;
     margin-bottom: 20px;
+    color: var(--blue-deep);
     animation: fadeUp 0.6s ease 0.1s both;
   }
 
   .hero h1 .highlight {
-    background: linear-gradient(90deg, var(--gold), var(--teal));
+    background: linear-gradient(90deg, var(--blue-mid), var(--blue-bright));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -235,8 +221,8 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--navy);
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright));
+    color: var(--white);
     border: none;
     padding: 14px 32px;
     border-radius: 8px;
@@ -245,18 +231,18 @@
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 30px rgba(212,168,67,0.25);
+    box-shadow: 0 8px 30px rgba(20,98,176,0.25);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 50px rgba(212,168,67,0.4);
+    box-shadow: 0 10px 40px rgba(20,98,176,0.35);
   }
 
   .btn-outline {
     background: transparent;
-    color: var(--white);
-    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--blue-deep);
+    border: 1px solid rgba(14,63,120,0.25);
     padding: 14px 32px;
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
@@ -267,11 +253,10 @@
   }
 
   .btn-outline:hover {
-    border-color: var(--gold);
-    background: rgba(212,168,67,0.07);
+    border-color: var(--blue-bright);
+    background: var(--blue-pale);
   }
 
-  /* floating cards */
   .hero-float {
     display: flex;
     justify-content: center;
@@ -282,8 +267,9 @@
   }
 
   .float-card {
-    background: var(--card-bg);
+    background: var(--white);
     border: 1px solid var(--border);
+    box-shadow: 0 6px 24px rgba(14,63,120,0.06);
     border-radius: 12px;
     padding: 16px 24px;
     display: flex;
@@ -297,8 +283,10 @@
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
-    background: rgba(0,184,169,0.12);
+    background: var(--blue-pale);
   }
+
+  .float-card strong { color: var(--blue-deep); }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
@@ -307,9 +295,7 @@
 
   /* ── STATS ── */
   .stats-band {
-    background: var(--card-bg);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: var(--blue-deep);
     padding: 50px 80px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -321,17 +307,13 @@
     font-family: 'Sora', sans-serif;
     font-size: 42px;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--gold), var(--teal));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--white);
   }
 
-  .stat-item p { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+  .stat-item p { color: rgba(255,255,255,0.65); font-size: 13px; margin-top: 4px; }
 
   /* ── SECTIONS ── */
   section { position: relative; z-index: 1; }
-
   .section { padding: 100px 80px; }
 
   .section-label {
@@ -340,7 +322,7 @@
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--blue-mid);
     margin-bottom: 12px;
   }
 
@@ -351,6 +333,7 @@
     line-height: 1.15;
     letter-spacing: -0.01em;
     margin-bottom: 16px;
+    color: var(--blue-deep);
   }
 
   .section-subtitle {
@@ -362,7 +345,7 @@
   }
 
   /* ── FEATURES ── */
-  #features { background: var(--navy-mid); }
+  #features { background: var(--blue-pale-2); }
 
   .features-header { text-align: center; }
   .features-header .section-subtitle { margin: 0 auto 60px; }
@@ -374,13 +357,13 @@
   }
 
   .feature-card {
-    background: var(--card-bg);
+    background: var(--white);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 32px;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: default;
   }
 
@@ -388,35 +371,35 @@
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--teal));
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--blue-mid), var(--blue-bright));
     opacity: 0;
     transition: opacity 0.3s;
   }
 
   .feature-card:hover {
-    border-color: rgba(212,168,67,0.35);
+    border-color: rgba(20,98,176,0.3);
     transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(14,63,120,0.08);
   }
 
   .feature-card:hover::before { opacity: 1; }
 
-  .feature-emoji {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
+  .feature-emoji { font-size: 28px; margin-bottom: 16px; display: block; }
 
   .feature-card h3 {
     font-family: 'Sora', sans-serif;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--blue-deep);
   }
 
   .feature-card p { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
 
   /* ── MODULES SECTION ── */
+  #modules { background: var(--white); }
+
   .modules-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -424,55 +407,41 @@
     align-items: center;
   }
 
-  .modules-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
-  }
+  .modules-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
 
   .module-item {
     display: flex;
     align-items: center;
     gap: 14px;
-    background: var(--card-bg);
+    background: var(--blue-pale-2);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 20px;
     transition: border-color 0.2s;
   }
 
-  .module-item:hover { border-color: rgba(0,184,169,0.4); }
+  .module-item:hover { border-color: rgba(20,98,176,0.35); }
 
-  .module-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--teal);
-    flex-shrink: 0;
-  }
-
-  .module-item span { font-size: 14px; font-weight: 500; }
+  .module-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue-bright); flex-shrink: 0; }
+  .module-item span { font-size: 14px; font-weight: 500; color: var(--ink); }
 
   .modules-visual {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: linear-gradient(160deg, var(--blue-deep), var(--blue-mid));
     border-radius: 20px;
     padding: 36px;
     text-align: center;
+    color: var(--white);
   }
 
-  .module-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-  }
+  .modules-visual h3 { color: var(--white) !important; }
+  .modules-visual p { color: rgba(255,255,255,0.7) !important; }
+
+  .module-tags { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
 
   .tag {
-    background: rgba(0,184,169,0.1);
-    border: 1px solid rgba(0,184,169,0.25);
-    color: var(--teal);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
     font-size: 12px;
     font-weight: 500;
     padding: 6px 14px;
@@ -481,9 +450,7 @@
 
   /* ── DEMO CTA ── */
   .demo-section {
-    background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
     padding: 100px 80px;
     text-align: center;
     position: relative;
@@ -494,49 +461,56 @@
     content: '';
     position: absolute;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(212,168,67,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
+
+  .demo-section .section-label { color: rgba(255,255,255,0.75); }
 
   .demo-section h2 {
     font-family: 'Sora', sans-serif;
     font-size: clamp(28px, 4vw, 48px);
     font-weight: 700;
     margin-bottom: 16px;
+    color: var(--white);
   }
 
-  .demo-section p { color: var(--text-muted); font-size: 16px; margin-bottom: 36px; }
+  .demo-section p { color: rgba(255,255,255,0.75); font-size: 16px; margin-bottom: 36px; }
+
+  .demo-section .btn-primary {
+    background: var(--white);
+    color: var(--blue-deep);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
 
   /* ── PRICING ── */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-  }
+  #pricing { background: var(--blue-pale-2); }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 
   .price-card {
-    background: var(--card-bg);
+    background: var(--white);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 36px;
-    transition: transform 0.3s, border-color 0.3s;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     position: relative;
   }
 
   .price-card.featured {
-    border-color: var(--gold);
-    background: linear-gradient(160deg, rgba(212,168,67,0.08) 0%, var(--card-bg) 60%);
+    border-color: var(--blue-bright);
+    background: linear-gradient(160deg, rgba(46,134,222,0.06) 0%, var(--white) 60%);
   }
 
-  .price-card:hover { transform: translateY(-6px); }
+  .price-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(14,63,120,0.10); }
 
   .price-badge {
     position: absolute;
     top: -12px; left: 50%; transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--navy);
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright));
+    color: var(--white);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -545,26 +519,17 @@
     border-radius: 100px;
   }
 
-  .price-card h3 {
-    font-family: 'Sora', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
+  .price-card h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; color: var(--blue-deep); margin-bottom: 8px; }
 
   .price-card .price-amount {
     font-family: 'Sora', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
-    color: var(--gold);
+    color: var(--blue-mid);
     margin: 16px 0 8px;
   }
 
-  .price-card .price-sub {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-bottom: 24px;
-  }
+  .price-card .price-sub { color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
 
   .price-features { list-style: none; }
 
@@ -572,18 +537,13 @@
     color: var(--text-muted);
     font-size: 14px;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(14,63,120,0.06);
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  .price-features li::before {
-    content: '✓';
-    color: var(--teal);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
+  .price-features li::before { content: '✓'; color: var(--blue-bright); font-weight: 700; flex-shrink: 0; }
 
   .price-btn {
     width: 100%;
@@ -599,131 +559,78 @@
 
   .price-btn-secondary {
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.15);
-    color: var(--white);
+    border: 1px solid rgba(14,63,120,0.2);
+    color: var(--blue-deep);
   }
 
-  .price-btn-secondary:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
+  .price-btn-secondary:hover { border-color: var(--blue-bright); color: var(--blue-mid); }
 
-  .price-btn-primary {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    border: none;
-    color: var(--navy);
-  }
+  .price-btn-primary { background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright)); border: none; color: var(--white); }
 
   /* ── TESTIMONIALS ── */
-  #testimonials { background: var(--navy-mid); }
+  #testimonials { background: var(--white); }
 
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-  }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
 
   .testi-card {
-    background: var(--card-bg);
+    background: var(--blue-pale-2);
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 32px;
   }
 
-  .stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; }
+  .stars { color: var(--blue-bright); font-size: 14px; margin-bottom: 16px; }
 
-  .testi-card blockquote {
-    font-size: 14px;
-    color: #cbd5e1;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
+  .testi-card blockquote { font-size: 14px; color: var(--ink); line-height: 1.8; margin-bottom: 20px; font-style: italic; }
 
   .testi-author { display: flex; align-items: center; gap: 12px; }
 
   .testi-avatar {
     width: 40px; height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold), var(--teal));
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright));
     display: flex; align-items: center; justify-content: center;
     font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-size: 14px;
-    color: var(--navy);
+    color: var(--white);
+    flex-shrink: 0;
   }
 
-  .testi-name { font-weight: 600; font-size: 14px; }
+  .testi-name { font-weight: 600; font-size: 14px; color: var(--blue-deep); }
   .testi-role { color: var(--text-muted); font-size: 12px; }
 
   /* ── CONTACT ── */
-  #contact { background: var(--navy); }
+  #contact { background: var(--blue-pale-2); }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: start;
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
 
-  .contact-info h2 {
-    font-family: 'Sora', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
+  .contact-info h2 { font-family: 'Sora', sans-serif; font-size: 36px; font-weight: 700; margin-bottom: 16px; color: var(--blue-deep); }
 
-  .contact-info p {
-    color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 36px;
-  }
+  .contact-info p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 36px; }
 
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 16px;
-  }
+  .contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
 
   .contact-detail .icon {
     width: 42px; height: 42px;
     border-radius: 10px;
-    background: rgba(212,168,67,0.1);
+    background: var(--white);
     border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     font-size: 18px;
+    flex-shrink: 0;
   }
 
   .contact-detail p { color: var(--text-muted); font-size: 14px; margin: 0; }
-  .contact-detail strong { color: var(--white); display: block; font-size: 15px; }
+  .contact-detail strong { color: var(--blue-deep); display: block; font-size: 15px; }
 
-  .contact-form {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 40px;
-  }
+  .contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(14,63,120,0.06); }
 
-  .contact-form h3 {
-    font-family: 'Sora', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 28px;
-  }
+  .contact-form h3 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 28px; color: var(--blue-deep); }
 
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-  }
+  .form-group { display: flex; flex-direction: column; margin-bottom: 16px; }
 
   .form-group label {
     font-size: 12px;
@@ -737,9 +644,9 @@
   .form-group input,
   .form-group textarea,
   .form-group select {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--white);
+    background: var(--blue-pale-2);
+    border: 1px solid rgba(14,63,120,0.14);
+    color: var(--ink);
     padding: 12px 16px;
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
@@ -750,18 +657,15 @@
 
   .form-group input:focus,
   .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: var(--gold);
-  }
+  .form-group select:focus { border-color: var(--blue-bright); }
 
-  .form-group select option { background: var(--navy-mid); }
   .form-group textarea { resize: none; }
 
   .form-submit {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--navy);
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-bright));
+    color: var(--white);
     border: none;
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
@@ -775,30 +679,14 @@
   .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
 
   /* ── FOOTER ── */
-  footer {
-    background: #060e1a;
-    border-top: 1px solid var(--border);
-    padding: 60px 80px 30px;
-  }
+  footer { background: var(--blue-deep); padding: 60px 80px 30px; }
 
-  .footer-top {
-    display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: 40px;
-    margin-bottom: 50px;
-  }
+  .footer-top { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; margin-bottom: 50px; }
 
-  .footer-brand .logo-text { font-size: 20px; margin-bottom: 12px; }
+  .footer-brand .logo-text { font-size: 20px; margin-bottom: 12px; color: var(--white); }
+  .footer-brand .logo-text span { color: rgba(255,255,255,0.6); }
 
-  .footer-brand p {
-    color: var(--text-muted);
-    font-size: 13px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    max-width: 280px;
-  }
-  
-
+  .footer-brand p { color: rgba(255,255,255,0.55); font-size: 13px; line-height: 1.8; margin-bottom: 20px; max-width: 280px; }
 
   .footer-col h4 {
     font-family: 'Sora', sans-serif;
@@ -806,13 +694,13 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: rgba(255,255,255,0.85);
     margin-bottom: 16px;
   }
 
   .footer-col a {
     display: block;
-    color: var(--text-muted);
+    color: rgba(255,255,255,0.55);
     text-decoration: none;
     font-size: 13px;
     margin-bottom: 10px;
@@ -822,7 +710,7 @@
   .footer-col a:hover { color: var(--white); }
 
   .footer-bottom {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255,255,255,0.12);
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
@@ -831,18 +719,12 @@
     gap: 12px;
   }
 
-  .footer-bottom p { color: var(--text-muted); font-size: 13px; }
+  .footer-bottom p { color: rgba(255,255,255,0.5); font-size: 13px; }
 
   .footer-links { display: flex; gap: 24px; }
 
-  .footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 13px;
-    transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--gold); }
+  .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
 
   /* ── WHATSAPP ── */
   .whatsapp {
@@ -864,55 +746,43 @@
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .whatsapp:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(37,211,102,0.5);
-  }
+  .whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
 
   /* ── SCROLL REVEAL ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { animation: none !important; }
   }
 
   /* ── MOBILE ── */
   @media (max-width: 900px) {
     header { padding: 16px 24px; }
 
-    nav { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0;
-      background: var(--navy-mid); padding: 20px 24px; gap: 20px; border-bottom: 1px solid var(--border); }
+    nav {
+      display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0;
+      background: var(--white); padding: 20px 24px; gap: 20px; border-bottom: 1px solid var(--border);
+      box-shadow: 0 12px 24px rgba(14,63,120,0.08);
+    }
 
     nav.open { display: flex; }
-
     .hamburger { display: flex; }
 
-    .hero { padding: 100px 24px 60px; }
-
+    .hero { padding: 90px 24px 60px; }
     .stats-band { padding: 50px 24px; }
-
     .section { padding: 70px 24px; }
 
     .modules-wrap, .contact-grid, .footer-top { grid-template-columns: 1fr; gap: 40px; }
-
     .form-row { grid-template-columns: 1fr; }
 
     footer { padding: 50px 24px 24px; }
-
     .footer-bottom { flex-direction: column; text-align: center; }
 
     .whatsapp .label { display: none; }
     .whatsapp { padding: 14px 16px; border-radius: 50%; }
   }
-  
-  header img{
-height:60px;
-}
 </style>
 </head>
 
@@ -921,9 +791,7 @@ height:60px;
 <!-- HEADER -->
 <header id="header">
   <div class="logo-area">
-    <img src="logo.png">
-
-  <!--   <div class="logo-icon">AF</div> -->
+    <div class="logo-icon">AF</div>
     <div class="logo-text">
       AdviCoreFin
       <span>Technologies</span>
@@ -971,22 +839,22 @@ height:60px;
       <div class="float-card">
         <div class="icon">🏦</div>
         <div>
-          <div style="font-weight:600;font-size:13px;">Cooperative Banks</div>
-          <div style="color:#94a3b8;font-size:12px;">Full CBS Support</div>
+          <strong style="font-weight:600;font-size:13px;display:block;">Cooperative Banks</strong>
+          <span style="color:var(--text-muted);font-size:12px;">Full CBS Support</span>
         </div>
       </div>
       <div class="float-card">
         <div class="icon">💳</div>
         <div>
-          <div style="font-weight:600;font-size:13px;">MFI / SHG / JLG</div>
-          <div style="color:#94a3b8;font-size:12px;">Microfinance Ready</div>
+          <strong style="font-weight:600;font-size:13px;display:block;">MFI / SHG / JLG</strong>
+          <span style="color:var(--text-muted);font-size:12px;">Microfinance Ready</span>
         </div>
       </div>
       <div class="float-card">
         <div class="icon">☁️</div>
         <div>
-          <div style="font-weight:600;font-size:13px;">Cloud Hosted</div>
-          <div style="color:#94a3b8;font-size:12px;">Secure &amp; Scalable</div>
+          <strong style="font-weight:600;font-size:13px;display:block;">Cloud Hosted</strong>
+          <span style="color:var(--text-muted);font-size:12px;">Secure &amp; Scalable</span>
         </div>
       </div>
     </div>
@@ -1032,7 +900,7 @@ height:60px;
     </div>
     <div class="feature-card reveal">
       <span class="feature-emoji">👥</span>
-      <h3>Membership & Shares</h3>
+      <h3>Membership &amp; Shares</h3>
       <p>Member registration, share capital management and full cooperative society membership lifecycle tracking.</p>
     </div>
     <div class="feature-card reveal">
@@ -1052,14 +920,14 @@ height:60px;
     </div>
     <div class="feature-card reveal">
       <span class="feature-emoji">📊</span>
-      <h3>Accounting & Reports</h3>
+      <h3>Accounting &amp; Reports</h3>
       <p>Daybook, Trial Balance, Balance Sheet, Profit &amp; Loss, and all statutory accounting reports required by regulators.</p>
     </div>
   </div>
 </section>
 
 <!-- MODULES -->
-<section id="modules" class="section" style="background:var(--navy-mid)">
+<section id="modules" class="section">
   <div class="modules-wrap">
     <div class="reveal">
       <span class="section-label">Platform Modules</span>
@@ -1068,26 +936,26 @@ height:60px;
       <div class="modules-list">
         <div class="module-item"><div class="module-dot"></div><span>Loan Management System</span></div>
         <div class="module-item"><div class="module-dot"></div><span>Deposit Management System</span></div>
-        <div class="module-item"><div class="module-dot"></div><span>Membership & Share Module</span></div>
-        <div class="module-item"><div class="module-dot"></div><span>Accounting & General Ledger</span></div>
-        <div class="module-item"><div class="module-dot"></div><span>MIS & Reporting Engine</span></div>
-        <div class="module-item"><div class="module-dot"></div><span>Head Office & Branch Module</span></div>
-        <div class="module-item"><div class="module-dot"></div><span>User Administration & Audit</span></div>
+        <div class="module-item"><div class="module-dot"></div><span>Membership &amp; Share Module</span></div>
+        <div class="module-item"><div class="module-dot"></div><span>Accounting &amp; General Ledger</span></div>
+        <div class="module-item"><div class="module-dot"></div><span>MIS &amp; Reporting Engine</span></div>
+        <div class="module-item"><div class="module-dot"></div><span>Head Office &amp; Branch Module</span></div>
+        <div class="module-item"><div class="module-dot"></div><span>User Administration &amp; Audit</span></div>
       </div>
     </div>
 
     <div class="modules-visual reveal">
       <div style="font-size:48px;margin-bottom:12px;">🏛️</div>
       <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px;">Supported Institution Types</h3>
-      <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px;">Our CBS is trusted by a wide range of financial institutions</p>
+      <p style="font-size:14px;margin-bottom:20px;">Our CBS is trusted by a wide range of financial institutions</p>
       <div class="module-tags">
         <span class="tag">Cooperative Banks</span>
-      <!--  <span class="tag">Urban Co-op Banks</span> -->
+        <span class="tag">Urban Co-op Banks</span>
         <span class="tag">Microfinance (MFI)</span>
+        <span class="tag">NBFC-MFI</span>
         <span class="tag">SHG Groups</span>
         <span class="tag">JLG Groups</span>
         <span class="tag">Credit Societies</span>
-      <!--  <span class="tag">NBFC-MFI</span> -->
         <span class="tag">Thrift Societies</span>
       </div>
     </div>
@@ -1107,9 +975,9 @@ height:60px;
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="section" style="background:var(--navy-mid)">
+<section id="pricing" class="section">
   <div class="reveal" style="text-align:center;margin-bottom:60px">
-    <span class="section-label">Plans & Pricing</span>
+    <span class="section-label">Plans &amp; Pricing</span>
     <h2 class="section-title">Transparent, Flexible Pricing</h2>
     <p class="section-subtitle" style="margin:0 auto">Pricing is tailored to your institution size and modules needed. Get in touch for a custom quote.</p>
   </div>
@@ -1121,9 +989,9 @@ height:60px;
       <div class="price-amount">Contact Us</div>
       <div class="price-sub">Custom quote based on membership size</div>
       <ul class="price-features">
-        <li>Loan & Deposit Management</li>
-        <li>Membership & Share Module</li>
-        <li>Basic Accounting & Reports</li>
+        <li>Loan &amp; Deposit Management</li>
+        <li>Membership &amp; Share Module</li>
+        <li>Basic Accounting &amp; Reports</li>
         <li>Day Begin / Day End Process</li>
         <li>Cloud Hosting Included</li>
       </ul>
@@ -1140,8 +1008,8 @@ height:60px;
         <li>Everything in Basic</li>
         <li>Multi-Branch Banking</li>
         <li>SHG / JLG Loan Management</li>
-        <li>Gold Loan & OD / CC Products</li>
-        <li>MIS Reports & Analytics</li>
+        <li>Gold Loan &amp; OD / CC Products</li>
+        <li>MIS Reports &amp; Analytics</li>
         <li>Priority Support</li>
       </ul>
       <button class="price-btn price-btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
@@ -1155,7 +1023,7 @@ height:60px;
       <ul class="price-features">
         <li>Everything in Professional</li>
         <li>Head Office + All Branches</li>
-        <li>Custom Reports & Integrations</li>
+        <li>Custom Reports &amp; Integrations</li>
         <li>Dedicated Support Manager</li>
         <li>On-site Training Included</li>
         <li>Regulatory Compliance Reports</li>
@@ -1178,10 +1046,10 @@ height:60px;
       <div class="stars">★★★★★</div>
       <blockquote>"The SHG and JLG loan management module has completely transformed how we handle our microfinance portfolio. Excellent support team."</blockquote>
       <div class="testi-author">
-        <div class="testi-avatar">RK</div>
+        <div class="testi-avatar">J</div>
         <div>
           <div class="testi-name">Jagan</div>
-          <div class="testi-role">CEO, Spoorthi Co-operative society</div>
+          <div class="testi-role">CEO, Spoorthi Co-operative Society</div>
         </div>
       </div>
     </div>
@@ -1190,7 +1058,7 @@ height:60px;
       <div class="stars">★★★★★</div>
       <blockquote>"Multi-branch operations are now seamless. The inter-branch transaction module and centralised reporting saved us weeks of manual work every month."</blockquote>
       <div class="testi-author">
-        <div class="testi-avatar">PS</div>
+        <div class="testi-avatar">H</div>
         <div>
           <div class="testi-name">Heamanth</div>
           <div class="testi-role">Manager, Shiv Jyothi MFI</div>
@@ -1202,7 +1070,7 @@ height:60px;
       <div class="stars">★★★★★</div>
       <blockquote>"From Day Begin to Day End, every process is automated and audited. The cloud hosting means zero IT overhead for our small team."</blockquote>
       <div class="testi-author">
-        <div class="testi-avatar">SN</div>
+        <div class="testi-avatar">D</div>
         <div>
           <div class="testi-name">Dilip Kumar</div>
           <div class="testi-role">Senior Branch Manager, Navodaya Thrift Society</div>
@@ -1213,7 +1081,7 @@ height:60px;
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section" style="background:var(--navy-mid)">
+<section id="contact" class="section">
   <div class="contact-grid">
     <div class="contact-info reveal">
       <span class="section-label">Get In Touch</span>
@@ -1237,10 +1105,18 @@ height:60px;
       </div>
 
       <div class="contact-detail">
-        <div class="icon">🌐</div>
+        <div class="icon">✉️</div>
+        <div>
+          <strong>info@advicorefin.com</strong>
+          <p>We reply within one business day</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">📍</div>
         <div>
           <strong>Advicore Fin Technologies</strong>
-          <p>Serving cooperative banks across India</p>
+          <p>EWS 249, Road No. 2, KPHB, Hyderabad 500072</p>
         </div>
       </div>
     </div>
@@ -1293,15 +1169,9 @@ height:60px;
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-       <!--   <div class="logo-area" style="margin-bottom:14px">
-    <div class="logo-icon">AF</div> 
- <div class="logo-area">
-    <img src="logo.png">-->
-   <div class="logo-text">AdviCoreFin<span>Technologies</span></div>
-      </div>
+      <div class="logo-text">AdviCoreFin<span>Technologies</span></div>
       <p>Next-generation Core Banking platform built for cooperative banks, microfinance institutions and financial organisations across India.</p>
     </div>
-
 
     <div class="footer-col">
       <h4>Product</h4>
@@ -1313,16 +1183,16 @@ height:60px;
 
     <div class="footer-col">
       <h4>Solutions</h4>
-      <a href="#">Cooperative Banks</a>
-      <a href="#">Microfinance (MFI)</a>
-      <a href="#">SHG / JLG Groups</a>
-      <a href="#">Credit Societies</a>
+      <a href="#modules">Cooperative Banks</a>
+      <a href="#modules">Microfinance (MFI)</a>
+      <a href="#modules">SHG / JLG Groups</a>
+      <a href="#modules">Credit Societies</a>
     </div>
 
     <div class="footer-col">
       <h4>Company</h4>
       <a href="#contact">Contact Us</a>
-      <a href="https://wa.me/919652988975" target="_blank">WhatsApp</a>
+      <a href="https://wa.me/919652988975" target="_blank" rel="noopener">WhatsApp</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
     </div>
@@ -1339,7 +1209,7 @@ height:60px;
 </footer>
 
 <!-- WHATSAPP FAB -->
-<a class="whatsapp" href="https://wa.me/919652988975" target="_blank">
+<a class="whatsapp" href="https://wa.me/919652988975" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L0 24l6.334-1.511A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.733.891.907-3.625-.235-.374A9.818 9.818 0 1112 21.818z"/>
@@ -1348,19 +1218,16 @@ height:60px;
 </a>
 
 <script>
-  // Mobile nav toggle
   function toggleNav() {
     document.getElementById('nav').classList.toggle('open');
   }
 
-  // Close nav on link click (mobile)
   document.querySelectorAll('nav a').forEach(a => {
     a.addEventListener('click', () => {
       document.getElementById('nav').classList.remove('open');
     });
   });
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -1372,8 +1239,8 @@ height:60px;
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Animated counter
   function animateCount(el, target, suffix='') {
+    if (!el) return;
     let start = 0;
     const dur = 1800;
     const step = (timestamp) => {
@@ -1400,7 +1267,6 @@ height:60px;
   const statsBand = document.querySelector('.stats-band');
   if (statsBand) statsObs.observe(statsBand);
 
-  // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     let current = '';
@@ -1408,7 +1274,7 @@ height:60px;
       if (window.scrollY >= s.offsetTop - 120) current = s.id;
     });
     document.querySelectorAll('nav a').forEach(a => {
-      a.style.color = a.getAttribute('href') === '#'+current ? 'var(--white)' : '';
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
   });
 </script>
